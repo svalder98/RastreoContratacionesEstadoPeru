@@ -1,0 +1,17 @@
+services:
+  metabase:
+    image: metabase/metabase:v0.63.18.x
+    container_name: metabase-san-antonio
+    network_mode: host
+    env_file: .env
+    environment:
+      MB_DB_TYPE: postgres
+      MB_DB_DBNAME: metabase_app
+      MB_DB_PORT: 5433
+      MB_DB_HOST: 127.0.0.1
+      MB_DB_USER: metabase_app
+      MB_JETTY_HOST: 127.0.0.1
+      MB_JETTY_PORT: 3000
+      MB_LOAD_SAMPLE_CONTENT: "false"
+      JAVA_OPTS: "-Xmx1g"
+    restart: "no"

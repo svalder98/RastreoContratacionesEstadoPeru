@@ -1,0 +1,10 @@
+.env
+*.env
+config/*secret*
+config/*credentials*
+data/*
+!data/.gitkeep
+*.log
+__pycache__/
+*.pyc
+.venv/
